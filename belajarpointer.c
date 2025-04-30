@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Fungsi untuk menghitung hasil operasi AND pada interval
 long long calculateIntervalScore(long long arr[], int l, int r) {
@@ -22,6 +23,7 @@ void fusePotions(long long arr[], int l, int r, int n) {
     for(int i = r + 1; i < n; i++) {
         arr[i - shift] = arr[i];
     }
+    printf("hello world");
 }
 
 // Fungsi rekursif untuk mencari skor maksimum
