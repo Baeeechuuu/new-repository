@@ -381,148 +381,32 @@ void multiplication_matrix_3x3(){
     print_3x3_matrix_multiplication(result);
 }
 
-int main(){
-    int choose,choose1;
-    do{
-        printf("+-------------------------------------------+\n");
-        printf("|                Mathematics                |\n");
-        printf("+-------------------------------------------+\n");
-        printf("|1. Pythagoras                              |\n");
-        printf("|2. Factorial                               |\n");
-        printf("|3. Fibbonaci                               |\n");
-        printf("|4. Circle Area                             |\n");
-        printf("|5. Exponential                             |\n");
-        printf("|6. Logarithms                              |\n");
-        printf("|7. Trigonometry                            |\n");
-        printf("|8. Distance 2D plane                       |\n");
-        printf("|9. Distance 3D plane                       |\n");
-        printf("|10. Calculus                               |\n");
-        printf("|11. Linear Algebra                         |\n");
-        printf("|12. Exit                                   |\n");
-        printf("+-------------------------------------------+\n");
-        printf("Choose a number(1-12) : ");
-        scanf("%d",&choose);
-        switch(choose){
-            case 1:
-                pythagoras();
-            break;
+void multiplication_matrix_3x3(){
+    int result[3][3], matrix1[3][3], matrix2[3][3];
 
-            case2:
-            break;
-
-            case 3:
-            break;
-
-            case 4:
-            break;
-
-            case 5:
-                exponential();
-            break;
-
-            case 6:
-                logarithms();
-            break;
-
-            case 7:
-            break;
-
-            case 8:
-            dist_2d_plane();
-            break;
-
-            case 9:
-                dist_3d_plane();
-            break;
-
-            case 10:
-            break;
-
-            case 11:
-                printf("+-------------------------------------------+\n");
-                printf("|              Linear Algebra               |\n");
-                printf("+-------------------------------------------+\n");
-                printf("|1. Matrix addition 2x2                     |\n");
-                printf("|2. Matrix addition 3x3                     |\n");
-                printf("|3. Matrix subtraction 2x2                  |\n");
-                printf("|4. Matrix subtraction 3x3                  |\n");
-                printf("|5. Matrix multiplication 2x2               |\n");
-                printf("|6. Matrix multiplication 3x3               |\n");
-                printf("|7. Exit                                    |\n");
-                printf("+-------------------------------------------+\n");
-                printf("Choose a number(1-6) : ");
-                scanf("%d",&choose1);
-                switch(choose1){
-                    case 1: 
-                        matrix_2x2();
-                    break;
-
-                    case 2:
-                        matrix_3x3();
-                    break;
-
-                    case 3:
-                        matrix2x2();
-                    break;
-
-                    case 4:
-                        matrix3x3();
-                    break;
-
-                    case 5:
-                        multiplication_matrix_2x2();
-                    break;
-
-                    case 6:
-                        multiplication_matrix_3x3();
-                    break;
-
-                    case 7: 
-                        printf("thank you for using this program");
-                        return 0;
-                    break;
-
-                    default: 
-                        printf("Wrong number. . .");
-                        printf("Please choose a correct number. . .");
-                    break;
-                }
-            break;
-
-            case 12:
-                matrix_2x2();
-            break;
-
-            case 13:
-                matrix_3x3();
-            break;
-
-            case 14:
-                matrix2x2();
-            break;
-
-            case 15:
-                matrix3x3();
-            break;
-
-            case 16:
-                multiplication_matrix_2x2();
-            break;
-
-            case 17:
-            break;
-
-            case 18:
-                printf("Thank you for using this program");
-                return 0;
-            break;
-
-            default:
-                printf("Wrong number. Please choose a correct number");
-            break;
+    printf("enter 3x3 matrix first elemen : \n");
+    for(int i = 0;i < 3;i++){
+        for(int j = 0;j < 3;j++){
+            scanf("%d",&matrix1[i][j]);
         }
-    }while(1);
-    return 0;
+    }
+
+    printf("enter 3x3 matrix second elemen : \n");
+    for(int i = 0;i < 3;i++){
+        for(int j = 0;j < 3;j++){
+            scanf("%d",&matrix2[i][j]);
+        }
+    }
+
+    printf("first matrix : \n");
+    print_3x3_matrix_multiplication(matrix1);
+
+    printf("second matrix : \n");
+    print_3x3_matrix_multiplication(matrix2);
+
+    multiplications_matrix_3x3(result, matrix1, matrix2);
+    printf("result of 3x3 matrix multiplication : \n");
+    print_3x3_matrix_multiplication(result);
 }
 
 int main(){
@@ -668,3 +552,148 @@ int main(){
     }while(1);
     return 0;
 }
+
+int main(){
+    int choose,choose1;
+    do{
+        printf("+-------------------------------------------+\n");
+        printf("|                Mathematics                |\n");
+        printf("+-------------------------------------------+\n");
+        printf("|1. Pythagoras                              |\n");
+        printf("|2. Factorial                               |\n");
+        printf("|3. Fibbonaci                               |\n");
+        printf("|4. Circle Area                             |\n");
+        printf("|5. Exponential                             |\n");
+        printf("|6. Logarithms                              |\n");
+        printf("|7. Trigonometry                            |\n");
+        printf("|8. Distance 2D plane                       |\n");
+        printf("|9. Distance 3D plane                       |\n");
+        printf("|10. Calculus                               |\n");
+        printf("|11. Linear Algebra                         |\n");
+        printf("|12. Exit                                   |\n");
+        printf("+-------------------------------------------+\n");
+        printf("Choose a number(1-12) : ");
+        scanf("%d",&choose);
+        switch(choose){
+            case 1:
+                pythagoras();
+            break;
+
+            case2:
+            break;
+
+            case 3:
+            break;
+
+            case 4:
+            break;
+
+            case 5:
+                exponential();
+            break;
+
+            case 6:
+                logarithms();
+            break;
+
+            case 7:
+            break;
+
+            case 8:
+            dist_2d_plane();
+            break;
+
+            case 9:
+                dist_3d_plane();
+            break;
+
+            case 10:
+            break;
+
+            case 11:
+                printf("+-------------------------------------------+\n");
+                printf("|              Linear Algebra               |\n");
+                printf("+-------------------------------------------+\n");
+                printf("|1. Matrix addition 2x2                     |\n");
+                printf("|2. Matrix addition 3x3                     |\n");
+                printf("|3. Matrix subtraction 2x2                  |\n");
+                printf("|4. Matrix subtraction 3x3                  |\n");
+                printf("|5. Matrix multiplication 2x2               |\n");
+                printf("|6. Matrix multiplication 3x3               |\n");
+                printf("|7. Exit                                    |\n");
+                printf("+-------------------------------------------+\n");
+                printf("Choose a number(1-6) : ");
+                scanf("%d",&choose1);
+                switch(choose1){
+                    case 1: 
+                        matrix_2x2();
+                    break;
+
+                    case 2:
+                        matrix_3x3();
+                    break;
+
+                    case 3:
+                        matrix2x2();
+                    break;
+
+                    case 4:
+                        matrix3x3();
+                    break;
+
+                    case 5:
+                        multiplication_matrix_2x2();
+                    break;
+
+                    case 6:
+                        multiplication_matrix_3x3();
+                    break;
+
+                    case 7: 
+                        printf("thank you for using this program");
+                        return 0;
+                    break;
+
+                    default: 
+                        printf("Wrong number. . .");
+                        printf("Please choose a correct number. . .");
+                    break;
+                }
+            break;
+
+            case 12:
+                matrix_2x2();
+            break;
+
+            case 13:
+                matrix_3x3();
+            break;
+
+            case 14:
+                matrix2x2();
+            break;
+
+            case 15:
+                matrix3x3();
+            break;
+
+            case 16:
+                multiplication_matrix_2x2();
+            break;
+
+            case 17:
+            break;
+
+            case 18:
+                printf("Thank you for using this program");
+                return 0;
+            break;
+
+            default:
+                printf("Wrong number. Please choose a correct number");
+            break;
+        }
+    }while(1);
+    return 0;
+}
+
